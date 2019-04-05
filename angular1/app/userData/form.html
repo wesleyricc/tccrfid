@@ -1,0 +1,24 @@
+<div role="form">
+  <div class="box-body">
+
+    <field id="name" label="Nome" grid="12 6 4" placeholder="Informe o Nome"
+        model="userData.name"></field>
+
+    <field id="codigorfid" label="Código RFID" grid="12 6 4" placeholder="Informe o Código RFID"
+        model="userData.codigorfid"></field>
+
+    <field id="local" label="Setor" grid="12 6 4" placeholder="Informe o Setor de trabalho"
+        model="userData.setor"></field>
+
+    <hr>
+
+  <div class="box-footer">
+    <button class="btn btn-primary" ng-click="createUser()"
+         ng-if="tabCreate">Incluir</button>
+    <button class="btn btn-info" ng-click="updateUser()"
+         ng-if="tabUpdate">Alterar</button>
+    <button class="btn btn-danger" ng-click="deleteUser()"
+         ng-if="tabDelete">Excluir</button>
+    <button class="btn btn-default" ng-click="cancel()">Cancelar</button>
+  </div>
+</div>

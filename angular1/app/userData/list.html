@@ -1,0 +1,25 @@
+<div class="box-body">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Código</th>
+        <th>Setor</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="userData in usersData">
+        <td>{{:: userData.name }}</td>
+        <td>{{:: userData.codigorfid }}</td>
+        <td>{{:: userData.setor }}</td>
+        <td style="width:100px;">
+          <button class="btn btn-warning" ng-click="showTabUpdate(userData)"><i class="fa fa-pencil"></i></button>
+          <button class="btn btn-danger" ng-click="showTabDelete(userData)"><i class="fa fa-trash-o"></i></button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="box-footer clearfix">
+   <paginator url="/#!/usersData" pages="{{ pages }}"></paginator>
+</div>

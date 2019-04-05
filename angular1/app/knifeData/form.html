@@ -1,0 +1,41 @@
+<div role="form">
+  <div class="box-body">
+
+<div class="row">
+    <field id="name" label="Nome" grid="12 6 4" placeholder="Informe o Nome"
+        model="knifeData.name"></field>
+
+    <field id="codigorfid" label="Código RFID" grid="12 6 4" placeholder="Informe o Código RFID"
+        model="knifeData.codigorfid"></field>
+
+    <field id="local" label="Local de Armazenamento" grid="12 6 4" placeholder="Informe o local de armazenamento"
+        model="knifeData.local"></field>
+</div>
+<div class="row">
+    <field id="estado" label="Estado" grid="12 6 4" placeholder="Informe o Estado da Faca"
+        model="knifeData.estado"></field>
+
+    <field id="montagens" label="Número de Montagens" grid="12 6 4" placeholder="Informe o Número de Montagens"
+        model="knifeData.montagens"></field>
+
+    <field id="categoria" label="Categoria" grid="12 6 4" placeholder="Informe a Categoria"
+        model="knifeData.categoria"></field>
+</div>
+
+    <div class="row">
+      <label for="file" class="custom-file-label">Escolha uma imagem</label>
+      <input type="file" name="file" id="file">
+    </div>
+
+    <hr>
+
+  <div class="box-footer">
+    <button class="btn btn-primary" ng-click="createKnifeData()"
+         ng-if="tabCreate">Incluir</button>
+    <button class="btn btn-info" ng-click="updateKnifeData()"
+         ng-if="tabUpdate">Alterar</button>
+    <button class="btn btn-danger" ng-click="deleteKnifeData()"
+         ng-if="tabDelete">Excluir</button>
+    <button class="btn btn-default" ng-click="cancel()">Cancelar</button>
+  </div>
+</div>
